@@ -17,8 +17,8 @@ class CreateBooksTable extends Migration
             $table->id();
 
             $table->text('name');
+            $table->text('date');
             $table->text('email');
-            $table->text('phone');
             $table->timestamps();
         });
     }

@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Books;
-use Database\Factories\BooksFactory;
+//use Database\Factories\BooksFactory;
 use Illuminate\Database\Seeder;
 
 class BooksSeeder extends Seeder

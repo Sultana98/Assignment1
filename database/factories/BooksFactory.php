@@ -21,10 +21,14 @@ class BooksFactory extends Factory
      */
     public function definition()
     {
+        $name = $this->faker->firstName;
+        $email = strtolower($name) . "@" . $this->faker->freeEmailDomain;
+        $fullName = $name . "" . $this->faker->lastName;
+
         return [
-            'name' => $this->faker->name,
-            'email' => $this->faker->email,
-            'phone' => $this->faker->phoneNumber,
+            'name' => $fullName,
+            'date' => $this->faker->date('d-m-y'),
+            'email' => $email,
 
         ];
     }

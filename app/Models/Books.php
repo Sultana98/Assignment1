@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Books extends Model
 {
     use HasFactory;
+
+    public function getPathAttribute (){
+        return $this -> path ();
+    }
+
+    public function path (){
+        return '/Book/' . $this -> id;
+    }
 }

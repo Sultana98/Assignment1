@@ -7,14 +7,11 @@ use Illuminate\Http\Request;
 
 class BooksController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //
+        $Books = Books::all();
+
+        return view('Books.index',['Books' => $Books]);
     }
 
     /**
@@ -38,15 +35,9 @@ class BooksController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Books  $books
-     * @return \Illuminate\Http\Response
-     */
     public function show(Books $books)
     {
-        //
+        return view ('Books.show', compact ('Book'));
     }
 
     /**
